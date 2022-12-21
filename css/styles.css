@@ -275,6 +275,7 @@ code {
   font-size: 0.875em;
   color: #d63384;
   background: #e9ecef;
+  border: 2px solid powderblue
   word-wrap: break-word;
 }
 a > code {
