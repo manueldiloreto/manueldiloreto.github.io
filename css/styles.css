@@ -275,8 +275,6 @@ code {
   font-size: 0.875em;
   color: #d63384;
   background: #e9ecef;
-      padding: .5em;
-    border-radius: 7px;
   word-wrap: break-word;
 }
 a > code {
