@@ -263,14 +263,14 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
     background: #e9ecef;
-  border: 2px solid
+  border: 2px solid;
   overflow: auto;
   font-size: 0.875em;
 }
 pre code {
   font-size: inherit;
     background: #e9ecef;
-  border: 2px solid
+  border: 2px solid;
   color: inherit;
   word-break: normal;
 }
@@ -279,11 +279,12 @@ code {
   font-size: 0.875em;
   color: inherit;
   background: #e9ecef;
-  border: 2px solid
+  border: 2px solid;
+    color: inherit;
   word-wrap: break-word;
 }
 a > code {
-  color: inherit;
+  color: #000000;
 }
 
 kbd {
