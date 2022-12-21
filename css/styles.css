@@ -277,7 +277,7 @@ pre code {
 
 code {
   font-size: 0.875em;
-  color: #d63384;
+  color: inherit;
   background: #e9ecef;
   border: 2px solid
   word-wrap: break-word;
