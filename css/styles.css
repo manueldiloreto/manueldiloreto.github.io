@@ -270,7 +270,6 @@ pre {
 pre code {
   font-size: inherit;
     background: #e9ecef;
-  border: 2px solid;
   color: inherit;
   word-break: normal;
 }
@@ -279,7 +278,6 @@ code {
   font-size: 0.875em;
   color: inherit;
   background: #e9ecef;
-  border: 2px solid;
     color: inherit;
   word-wrap: break-word;
 }
