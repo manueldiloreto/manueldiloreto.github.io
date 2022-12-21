@@ -237,6 +237,7 @@ sup {
 
 a {
   color: #ffc800;
+  text-decoration: underline;
 }
 a:hover {
   color: #cca000;
