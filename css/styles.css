@@ -11411,16 +11411,16 @@ p {
   }
 }
 
-#particles-js{
-  /* width: 100%; */
-  /* height: 100%; */
-  background-color: #343a40;
-  background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: -1;
+#particles-js {
+    /* height: 100%; */
+    width: 100%;
+    background-color: lightslategrey;
+    background-image: url(styles.css);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
 }
 
 header.masthead {
