@@ -11419,7 +11419,7 @@ p {
 #particles-js {
     width: 100%;
     height: 800px;
-    background-color: lightslategrey;
+    background-color: #fff;
     background-image: url(styles.css);
     background-size: cover;
     background-position: 50% 50%;
