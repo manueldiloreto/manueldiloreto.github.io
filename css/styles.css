@@ -11433,6 +11433,7 @@ header.masthead {
   background-size: cover;
 }
 header.masthead .masthead-subheading {
+  padding-top: 17rem;
   font-size: 1.5rem;
   font-style: italic;
   line-height: 1.5rem;
