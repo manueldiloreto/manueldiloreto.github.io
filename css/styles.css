@@ -11454,7 +11454,7 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    /* padding-top: 17rem; */
+    /* padding-top: 0rem; */
     padding-bottom: 12.5rem;
   }
   header.masthead .masthead-subheading {
