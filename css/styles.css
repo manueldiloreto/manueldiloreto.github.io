@@ -11801,6 +11801,39 @@ section#contact form#contactForm :-ms-input-placeholder {
 .portfolio-modal .modal-dialog2 {
   margin: 1rem;
 }
+.modal.fade .modal-dialog2 {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog2 {
+    transition: none;
+  }
+}
+.modal.show .modal-dialog2 {
+  transform: none;
+}
+.modal.modal-static .modal-dialog2 {
+  transform: scale(1.02);
+}
+
+.modal-dialog2-scrollable {
+  height: calc(100% - 1rem);
+}
+.modal-dialog2-scrollable .modal-content {
+  max-height: 100%;
+  overflow: hidden;
+}
+.modal-dialog2-scrollable .modal-body {
+  overflow-y: auto;
+}
+
+.modal-dialog2-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+
 
 .footer {
   text-align: center;
