@@ -11554,6 +11554,11 @@ header.masthead .masthead-heading {
   opacity: 0.3;
 }
 
+.card-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+
 .timeline {
   position: relative;
   padding: 0;
