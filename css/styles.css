@@ -11817,7 +11817,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     opacity: 1;
     pointer-events: auto;
   }
- & > div {
+  & > div {
     width: 400px;
     position: absolute;
     top: 50%;
@@ -11825,7 +11825,9 @@ section#contact form#contactForm :-ms-input-placeholder {
     transform: translate(-50%, -50%);
     padding: 2em;
     background: white;
-   
+  }
+  }
+
 .modal2-close {
   color: #aaa;
   line-height: 50px;
@@ -11841,13 +11843,16 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
 }
 
-.container2 {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.modal2-window {
+  & > div {
+    border-radius: 1rem;
+  }
 }
-  
+
+.modal2-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
 .btn2 {
   background-color: white;
   padding: 1em 1.5em;
