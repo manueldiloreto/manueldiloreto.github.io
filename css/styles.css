@@ -11840,3 +11840,22 @@ section#contact form#contactForm :-ms-input-placeholder {
     color: black;
   }
 }
+
+.container2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+.btn2 {
+  background-color: white;
+  padding: 1em 1.5em;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  i {
+    padding-right: 0.3em;
+  }
+}
+
+  
