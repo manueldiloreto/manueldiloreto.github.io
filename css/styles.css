@@ -11493,8 +11493,12 @@ header.masthead .masthead-heading {
   transition: opacity ease-in-out 0.25s;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-  font-size: 1.25rem;
-  color: white;
+    font-size: 1.25rem;
+    color: white;
+    margin: auto;
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
   opacity: 1;
