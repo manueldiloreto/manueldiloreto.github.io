@@ -11804,7 +11804,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .modal-dialogx {
   position: relative;
-  width: 25vh;
+  width: 100vh;
   margin: 0.5rem;
   pointer-events: none;
 }
@@ -11858,5 +11858,5 @@ section#contact form#contactForm :-ms-input-placeholder {
   
 .portfolio-modal .modal-dialogx {
   margin: 1rem;
-  max-width: 25vw;
+  max-width: 100vh;
 }
