@@ -11522,12 +11522,12 @@ header.masthead .masthead-heading {
 
 .portfolio-modal .modal-dialog {
   /* margin: 1rem; */
-  max-width: 70vh;
+  max-width: 65vh;
 }
 
 .portfolio-modal .modal-content {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
