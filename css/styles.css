@@ -571,6 +571,7 @@ progress {
 .list-inline {
   padding-left: 0;
   text-align: start;
+  margin-bottom: 10px;
 }
 
 .list-inline-item {
