@@ -5543,6 +5543,7 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
+  padding: 1rem;
 }
 
 .modal-backdrop {
@@ -11520,7 +11521,7 @@ header.masthead .masthead-heading {
 }
 
 .portfolio-modal .modal-dialog {
-  margin: 1rem;
+  /* margin: 1rem; */
   max-width: 75vw;
 }
 
