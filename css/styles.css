@@ -11957,7 +11957,7 @@ li {
     transition: all 0.2s ease-in;
 }
 
-.image-box img {
+.card .image-box img {
   -webkit-transition:all .9s ease; 
   -moz-transition:all .9s ease; 
   -o-transition:all .9s ease;
