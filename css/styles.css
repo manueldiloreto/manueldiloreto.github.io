@@ -11926,12 +11926,12 @@ li {
 
 /* Add a grey background color on mouse-over */
 .btn:hover {
-  background-color: #ddd;
+  background-color: rgba (8, 171, 255, 0.6);
 }
 
 /* Add a dark background color to the active button */
 .btn.active {
-  background-color: #666;
+  background-color: #00abff;
    color: white;
 }
 
