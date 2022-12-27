@@ -11957,6 +11957,15 @@ li {
     transition: all 0.2s ease-in;
 }
 
+.image-box img {
+  -webkit-transition:all .9s ease; 
+  -moz-transition:all .9s ease; 
+  -o-transition:all .9s ease;
+  -ms-transition:all .9s ease; 
+  width: 100%;
+  height: 200px;
+}
+
 .card:hover .image-box img {
     opacity: 0.7;
     -webkit-transform: scale(1.15);
