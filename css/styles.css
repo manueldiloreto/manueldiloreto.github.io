@@ -4525,6 +4525,7 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
   display: none;
   margin: 30px;
+  text-align: start;
 }
 .card > hr {
   margin-right: 0;
@@ -11815,7 +11816,8 @@ li {
 }
 
 
-/* xxxxxxxxxxxxxxxxxx */
+/*
+
 #cards_landscape_wrap-2 {
     text-align: center;
     background: #F7F7F7;
@@ -11896,7 +11898,8 @@ li {
     letter-spacing: 1px;
     color: #00acc1;
 }
-/* xxxxxxxxxxxxxxx */
+
+*/
 
 
 
