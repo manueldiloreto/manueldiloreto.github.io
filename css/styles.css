@@ -11932,3 +11932,9 @@ li {
   background-color: #666;
    color: white;
 }
+
+.column {
+  float: left;
+  width: 100%;
+  display: none; /* Hide all elements by default */
+}
