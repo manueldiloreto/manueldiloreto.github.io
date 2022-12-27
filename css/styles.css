@@ -11815,7 +11815,7 @@ li {
 }
 
 
-/*
+/* xxxxxxxxxxxxxxxxxx */
 #cards_landscape_wrap-2 {
     text-align: center;
     background: #F7F7F7;
@@ -11896,7 +11896,11 @@ li {
     letter-spacing: 1px;
     color: #00acc1;
 }
-*/
+/* xxxxxxxxxxxxxxx */
+
+
+
+
 /* Clear floats after rows */
 .row:after {
   content: "";
