@@ -11811,6 +11811,10 @@ li {
     text-align: -webkit-match-parent;
   margin-bottom: 5px;
 }
+
+
+
+
 #cards_landscape_wrap-2 {
     text-align: center;
     background: #F7F7F7;
@@ -11888,7 +11892,6 @@ li {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: 'Roboto Black', sans-serif;
     letter-spacing: 1px;
     color: #00acc1;
 }
