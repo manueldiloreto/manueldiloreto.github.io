@@ -11981,3 +11981,10 @@ li {
     -o-transform: scale(1.15);
     transform: scale(1.15);
 }
+
+codeoutput {
+  font-size: 0.875em;
+  color: inherit;
+    color: inherit;
+  word-wrap: break-word;
+}
