@@ -266,6 +266,7 @@ pre {
     background: #e9ecef;
   overflow: auto;
   font-size: 0.875em;
+  padding: 5px;
 }
 pre code {
   font-size: inherit;
