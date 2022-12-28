@@ -260,8 +260,8 @@ samp {
 
 pre {
   display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
     background: #e9ecef;
   overflow: auto;
   font-size: 0.875em;
@@ -11989,4 +11989,5 @@ codeoutput {
   word-wrap: break-word;
   font-family: var(--bs-font-monospace);
   white-space: pre;
+  margin-bottom: 1rem;
 }
