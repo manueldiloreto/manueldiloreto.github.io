@@ -258,7 +258,7 @@ daily_sleep &lt;- read.csv(&quot;sleepDay_merged.csv&quot;)</code></pre>
 NAs.</p>
 <pre class="r"><code># Inspect the data with glimpse
 glimpse(daily_activity) </code></pre>
-<codeoutput>## Rows: 940
+<div class="cocontainer"><codeoutput>## Rows: 940
 ## Columns: 15
 ## $ Id                       &lt;dbl&gt; 1503960366, 1503960366, 1503960366, 150396036…
 ## $ ActivityDate             &lt;chr&gt; &quot;4/12/2016&quot;, &quot;4/13/2016&quot;, &quot;4/14/2016&quot;, &quot;4/15/…
@@ -274,14 +274,14 @@ glimpse(daily_activity) </code></pre>
 ## $ FairlyActiveMinutes      &lt;int&gt; 13, 19, 11, 34, 10, 20, 16, 31, 12, 8, 27, 21…
 ## $ LightlyActiveMinutes     &lt;int&gt; 328, 217, 181, 209, 221, 164, 233, 264, 205, …
 ## $ SedentaryMinutes         &lt;int&gt; 728, 776, 1218, 726, 773, 539, 1149, 775, 818…
-## $ Calories                 &lt;int&gt; 1985, 1797, 1776, 1745, 1863, 1728, 1921, 203…</codeoutput>
+## $ Calories                 &lt;int&gt; 1985, 1797, 1776, 1745, 1863, 1728, 1921, 203…</codeoutput></div>
 <pre class="r"><code># Check for duplicates
 sum(duplicated(daily_activity)) </code></pre>
-    <codeoutput>## There are 0 duplicates </codeoutput>
+    <div class="cocontainer"><codeoutput>## There are 0 duplicates </codeoutput></div>
 <pre class="r"><code># Check for blanks and NAs
 daily_activity &lt;- daily_activity %&gt;% na_if(&quot;&quot;)
 sum(is.na(daily_activity)) </code></pre>
-<codeoutput>## There are 0 blanks or NAs</codeoutput>
+    <div class="cocontainer"><codeoutput>## There are 0 blanks or NAs</codeoutput></div>
     
 <p>It can immediately be observed that there are no duplicate rows, NAs,
 or blanks. There are, however, two major issues. First, the variable
@@ -329,8 +329,8 @@ the dataframe skews our results.</p>
 <pre class="r"><code># Average total steps and calories when user 4057192912 is present
 daily_activity %&gt;% 
   summarize(mean_totalsteps=mean(TotalSteps), mean_calories=mean(Calories))</code></pre>
-<codeoutput>## mean_totalsteps: 7637.911
-## mean_calories: 2303.61</codeoutput>
+<div class="cocontainer"><codeoutput>## mean_totalsteps: 7637.911
+    ## mean_calories: 2303.61</codeoutput></div>
 <div data-pagedtable="true">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["mean_totalsteps"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["mean_calories"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"7637.911","2":"2303.61"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -340,8 +340,8 @@ daily_activity %&gt;%
 daily_activity %&gt;% 
   filter(!(Id==&quot;4057192912&quot;)) %&gt;% 
   summarize(mean_totalsteps=mean(TotalSteps), mean_calories=mean(Calories))</code></pre>
-<codeoutput>## mean_totalsteps: 7654.15
-## mean_calories: 2305.019</codeoutput>
+<div class="cocontainer"><codeoutput>## mean_totalsteps: 7654.15
+    ## mean_calories: 2305.019</codeoutput></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["mean_totalsteps"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["mean_calories"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"7654.15","2":"2305.019"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -353,6 +353,7 @@ absent in the dataframe. Given that the sample size is already small, I
 prefer not to remove this user from the sample.<br />
 Lastly, let’s observe the data with skimr:</p>
 <pre class="r"><code>skim_without_charts(daily_activity)</code></pre>
+<div class="cocontainer">
 <hr>
 <table>
 <caption>Data summary</caption>
@@ -664,29 +665,30 @@ Lastly, let’s observe the data with skimr:</p>
 </tbody>
 </table>
 <hr>
+    </div>
 <br>
 <p>This skim function reveals that there are some entries where
 TotalSteps and Calories are equal to 0 and where SedentaryMinutes are
 1440 (which equals to 24 hours). Let’s count them.</p>
 <pre class="r"><code># Counting how many rows have TotalSteps equal to 0
-daily_activity %&gt;% count(TotalSteps==0) 
-## 77 entries with 0 TotalSteps</code></pre>
+daily_activity %&gt;% count(TotalSteps==0)</code></pre> 
+    <div class="cocontainer"><codeoutput>## 77 entries with 0 TotalSteps</codeoutput></div>
 <div data-pagedtable="true">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["TotalSteps == 0"],"name":[1],"type":["lgl"],"align":["right"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"FALSE","2":"863"},{"1":"TRUE","2":"77"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <pre class="r"><code># Counting how many rows have Calories equal to 0
-daily_activity %&gt;% count(Calories==0) 
-## 4 entries with 0 Calories</code></pre>
+daily_activity %&gt;% count(Calories==0) </code></pre>
+<div class="cocontainer"><codeoutput>## 4 entries with 0 Calories</codeoutput></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["Calories == 0"],"name":[1],"type":["lgl"],"align":["right"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"FALSE","2":"936"},{"1":"TRUE","2":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <pre class="r"><code># Counting how many rows have SedentaryMinutes equal to 24 hours
-daily_activity %&gt;% count(SedentaryMinutes==1440) 
-## 79 entries with 1440 SedentaryMinutes</code></pre>
+daily_activity %&gt;% count(SedentaryMinutes==1440) </code></pre>
+<div class="cocontainer"><codeoutput>## 79 entries with 1440 SedentaryMinutes</codeoutput></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["SedentaryMinutes == 1440"],"name":[1],"type":["lgl"],"align":["right"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"FALSE","2":"861"},{"1":"TRUE","2":"79"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
