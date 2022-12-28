@@ -11983,6 +11983,13 @@ li {
     transform: scale(1.15);
 }
 
+.cocontainer {
+      border-left-style: solid;
+    padding-left: 10px;
+    border-color: #71c7ec;
+    margin-top: 10px;
+}
+
 codeoutput {
   font-size: 0.875em;
   color: inherit;
@@ -11993,9 +12000,4 @@ codeoutput {
   margin-bottom: 1rem;
 }
 
-.cocontainer {
-      border-left-style: solid;
-    padding-left: 10px;
-    border-color: #71c7ec;
-    margin-top: 10px;
-}
+
