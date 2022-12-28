@@ -70,6 +70,13 @@
   box-sizing: border-box;
 }
 
+cocontainer {
+      border-left-style: solid;
+    padding-left: 10px;
+    border-color: #0d6efd;
+    margin-top: 10px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
