@@ -277,13 +277,14 @@ glimpse(daily_activity)
 ## $ SedentaryMinutes         &lt;int&gt; 728, 776, 1218, 726, 773, 539, 1149, 775, 818…
 ## $ Calories                 &lt;int&gt; 1985, 1797, 1776, 1745, 1863, 1728, 1921, 203…</code></pre>
 <pre class="r"><code># Check for duplicates
-sum(duplicated(daily_activity))
-## There are 0 duplicates
+sum(duplicated(daily_activity)) </code></pre>
+    <codeoutput> There are 0 duplicates </codeoutput>
 
 # Check for blanks and NAs
 daily_activity &lt;- daily_activity %&gt;% na_if(&quot;&quot;)
 sum(is.na(daily_activity))
 ## There are 0 blanks or NAs</code></pre>
+    
 <p>It can immediately be observed that there are no duplicate rows, NAs,
 or blanks. There are, however, two major issues. First, the variable
 ActivityDate is formatted as a string instead of DateTime. Second, there
