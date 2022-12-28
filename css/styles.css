@@ -11987,4 +11987,5 @@ codeoutput {
   color: inherit;
     color: inherit;
   word-wrap: break-word;
+  font-family: var(--bs-font-monospace);
 }
