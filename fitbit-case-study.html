@@ -715,22 +715,22 @@ piece of information in itself.</p>
 <div id="cleaning-hourly_calories-hourly_intensities-hourly_steps" class="section level3">
 <h3>3.2. Cleaning hourly_calories, hourly_intensities, hourly_steps</h3>
 <pre class="r"><code># Inspect the data with glimpse
-glimpse(hourly_calories)
-## Output
+glimpse(hourly_calories)</code></pre>
+<div class="cocontainer"><codeoutput>## Output
 ## Rows: 22,099
 ## Columns: 3
 ## $ Id           &lt;dbl&gt; 1503960366, 1503960366, 1503960366, 1503960366, 150396036…
 ## $ ActivityHour &lt;chr&gt; &quot;4/12/2016 12:00:00 AM&quot;, &quot;4/12/2016 1:00:00 AM&quot;, &quot;4/12/20…
-## $ Calories     &lt;int&gt; 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73, 66, …</code></pre>
+    ## $ Calories     &lt;int&gt; 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73, 66, …</codeoutput></div>
 
 <pre class="r"><code># Check for duplicates
-sum(duplicated(hourly_calories))
-## There are 0 duplicates
+sum(duplicated(hourly_calories))</code></pre>
+<div class="cocontainer"><codeoutput>## There are 0 duplicates</codeoutput></div>
 
-# Check for blanks and NAs
+<pre class="r"><code># Check for blanks and NAs
 hourly_calories &lt;- hourly_calories %&gt;% na_if(&quot;&quot;)
-sum(is.na(daily_activity)
-## There are 0 blanks or NAs</code></pre>
+sum(is.na(daily_activity)</code></pre>
+<div class="cocontainer"><codeoutput>## There are 0 blanks or NAs</codeoutput></div>
 
 <p>Once again, there are no duplicates, blanks, or NAs, but ActivityHour
 is formatted incorrectly.</p>
@@ -739,24 +739,24 @@ is formatted incorrectly.</p>
 hourly_steps.</p>
 <pre class="r"><code>#### Cleaning hourly_intensities ####
 # Check for duplicates
-sum(duplicated(hourly_intensities))
-## There are 0 duplicates
+sum(duplicated(hourly_intensities))</code></pre>
+<div class="cocontainer"><codeoutput>## There are 0 duplicates</codeoutput></div>
 
-# Check for blanks and NAs
+<pre class="r"><code># Check for blanks and NAs
 hourly_intensities &lt;- hourly_intensities %&gt;% na_if(&quot;&quot;)
-sum(is.na(hourly_intensities))
-## There are 0 blanks or NAs</code></pre>
+sum(is.na(hourly_intensities))</code></pre>
+<div class="cocontainer"><codeoutput>## There are 0 blanks or NAs</codeoutput></div>
 <pre class="r"><code># Format ActivityHour as Datetime
 hourly_intensities$ActivityHour  &lt;- as.POSIXct(hourly_intensities$ActivityHour, format=&quot;%m/%d/%Y %I:%M:%S %p&quot;)</code></pre>
 <pre class="r"><code>#### Cleaning hourly_steps ####
-# Check for duplicates
-sum(duplicated(hourly_steps))
-## There are 0 duplicates <
+<pre class="r"><code># Check for duplicates
+sum(duplicated(hourly_steps))</code></pre>
+<div class="cocontainer"><codeoutput>## There are 0 duplicates</codeoutput></div>
 
-# Check for blanks and NAs
+<pre class="r"><code># Check for blanks and NAs
 hourly_steps &lt;- hourly_steps %&gt;% na_if(&quot;&quot;)
-sum(is.na(hourly_steps))
-There are 0 blanks or NAs</code></pre>
+sum(is.na(hourly_steps))</code></pre>
+<div class="cocontainer"><codeoutput>## There are 0 blanks or NAs</codeoutput></div>
 <pre class="r"><code># Format ActivityHour as Datetime
 hourly_steps$ActivityHour  &lt;- as.POSIXct(hourly_steps$ActivityHour, format=&quot;%m/%d/%Y %I:%M:%S %p&quot;)</code></pre>
 <p>Lastly, let’s merge these three datasets and extract the hour from
@@ -771,13 +771,14 @@ hourly_activity$Hour &lt;- hour(hourly_activity$ActivityHour)</code></pre>
 <div id="cleaning-daily_sleep" class="section level3">
 <h3>3.3. Cleaning daily_sleep</h3>
 <pre class="r"><code># Check for duplicates
-sum(duplicated(daily_sleep)) 
-## There are 3 duplicates
+sum(duplicated(daily_sleep)) </code></pre>
+<div class="cocontainer"><codeoutput>## There are 3 duplicates</codeoutput></div>
 
-# Check for blanks and NAs
+<pre class="r"><code># Check for blanks and NAs
 daily_sleep &lt;- daily_sleep %&gt;% na_if(&quot;&quot;)
-sum(is.na(daily_sleep))
-## There are 0 blanks or NAs</code></pre>
+sum(is.na(daily_sleep))</code></pre>
+<div class="cocontainer"><codeoutput>## There are 0 blanks or NAs</codeoutput></div>
+
 <p>Three duplicates have been found. Let’s remove them.</p>
 <pre class="r"><code>## Remove duplicates
 daily_sleep &lt;- distinct(daily_sleep)</code></pre>
@@ -799,9 +800,8 @@ the dataset. There are a variety of ways to check this relationship, but
 purely for practice, I am going to run a linear regression.</p>
 <pre class="r"><code># Linear regression between Total Steps (independent variable) and Calories (dependent variable)
 reg_steps_calories &lt;- lm(Calories ~ TotalSteps, data=daily_activity) 
-summary(reg_steps_calories)
-## 
-## Call:
+summary(reg_steps_calories)</code></pre>
+<div class="cocontainer"><codeoutput>## Call:
 ## lm(formula = Calories ~ TotalSteps, data = daily_activity)
 ## 
 ## Residuals:
@@ -817,7 +817,7 @@ summary(reg_steps_calories)
 ## 
 ## Residual standard error: 579.3 on 938 degrees of freedom
 ## Multiple R-squared:   0.35,  Adjusted R-squared:  0.3493 
-## F-statistic:   505 on 1 and 938 DF,  p-value: &lt; 2.2e-16</code></pre>
+## F-statistic:   505 on 1 and 938 DF,  p-value: &lt; 2.2e-16</codeoutput></div>
 <pre class="r"><code># Visualizing the relationship between Total Steps and Calories
 ggplot(daily_activity, aes(x=TotalSteps, y=Calories)) +
   geom_point() +
