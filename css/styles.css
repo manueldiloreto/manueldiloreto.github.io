@@ -11991,3 +11991,10 @@ codeoutput {
   white-space: pre;
   margin-bottom: 1rem;
 }
+
+cocontainer {
+      border-left-style: solid;
+    padding-left: 10px;
+    border-color: #0d6efd;
+    margin-top: 10px;
+}
