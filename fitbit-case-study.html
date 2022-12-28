@@ -749,8 +749,9 @@ sum(is.na(hourly_intensities))</code></pre>
 <div class="cocontainer"><codeoutput>## There are 0 blanks or NAs</codeoutput></div>
 <pre class="r"><code># Format ActivityHour as Datetime
 hourly_intensities$ActivityHour  &lt;- as.POSIXct(hourly_intensities$ActivityHour, format=&quot;%m/%d/%Y %I:%M:%S %p&quot;)</code></pre>
+
 <pre class="r"><code>#### Cleaning hourly_steps ####
-<pre class="r"><code># Check for duplicates
+# Check for duplicates
 sum(duplicated(hourly_steps))</code></pre>
 <div class="cocontainer"><codeoutput>## There are 0 duplicates</codeoutput></div>
 
