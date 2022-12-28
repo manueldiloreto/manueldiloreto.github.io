@@ -771,6 +771,7 @@ hourly_activity &lt;- merge(hourly_activity, hourly_steps, by=c(&quot;Id&quot;, 
 hourly_activity$Hour &lt;- hour(hourly_activity$ActivityHour)</code></pre>
 </div>
 <div id="cleaning-daily_sleep" class="section level3">
+    <br>
 <h3>3.3. Cleaning daily_sleep</h3>
 <pre class="r"><code># Check for duplicates
 sum(duplicated(daily_sleep)) </code></pre>
