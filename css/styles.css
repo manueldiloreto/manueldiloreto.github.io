@@ -11985,7 +11985,8 @@ li {
 
 .cocontainer {
       border-left-style: solid;
-    padding-left: 10px;
+  border-left-width: 15px;
+    padding-left: 20x;
     border-color: #71c7ec;
     margin-top: 10px;
 }
