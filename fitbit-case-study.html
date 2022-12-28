@@ -257,8 +257,8 @@ daily_sleep &lt;- read.csv(&quot;sleepDay_merged.csv&quot;)</code></pre>
 <p>First, let’s inspect the data and check if there are duplicates or
 NAs.</p>
 <pre class="r"><code># Inspect the data with glimpse
-glimpse(daily_activity)
-## Output:
+glimpse(daily_activity) </code></pre>
+<codeoutput>
 ## Rows: 940
 ## Columns: 15
 ## $ Id                       &lt;dbl&gt; 1503960366, 1503960366, 1503960366, 150396036…
@@ -275,15 +275,15 @@ glimpse(daily_activity)
 ## $ FairlyActiveMinutes      &lt;int&gt; 13, 19, 11, 34, 10, 20, 16, 31, 12, 8, 27, 21…
 ## $ LightlyActiveMinutes     &lt;int&gt; 328, 217, 181, 209, 221, 164, 233, 264, 205, …
 ## $ SedentaryMinutes         &lt;int&gt; 728, 776, 1218, 726, 773, 539, 1149, 775, 818…
-## $ Calories                 &lt;int&gt; 1985, 1797, 1776, 1745, 1863, 1728, 1921, 203…</code></pre>
+## $ Calories                 &lt;int&gt; 1985, 1797, 1776, 1745, 1863, 1728, 1921, 203…</codeoutput>
 <pre class="r"><code># Check for duplicates
 sum(duplicated(daily_activity)) </code></pre>
     <codeoutput> There are 0 duplicates </codeoutput>
-
+<pre class="r"><code>
 # Check for blanks and NAs
 daily_activity &lt;- daily_activity %&gt;% na_if(&quot;&quot;)
-sum(is.na(daily_activity))
-## There are 0 blanks or NAs</code></pre>
+sum(is.na(daily_activity)) </code></pre>
+<codeoutput>## There are 0 blanks or NAs</codeoutput>
     
 <p>It can immediately be observed that there are no duplicate rows, NAs,
 or blanks. There are, however, two major issues. First, the variable
