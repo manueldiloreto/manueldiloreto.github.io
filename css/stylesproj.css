@@ -11387,8 +11387,8 @@ p {
   #mainNav {
     border: none;
     padding-top: 6px;
-    padding-bottom: 0px;
-    background-color: white;
+    padding-bottom: 6px;
+    background-color: black;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
