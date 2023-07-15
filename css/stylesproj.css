@@ -11399,11 +11399,11 @@ p {
     height: 2rem;
     transition: height 0.3s ease-in-out;
   }
-  #mainNav.navbar-shrink {
+  /* #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #fff;
-  }
+  } */
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
