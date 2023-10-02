@@ -11972,7 +11972,7 @@ li {
   -o-transition:all .9s ease;
   -ms-transition:all .9s ease; 
   width: 300px;
-  height: 225px;
+  height: 250px;
 }
 
 .card:hover .image-box img {
