@@ -11494,6 +11494,7 @@ header.masthead .masthead-heading {
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  z-index: 2;
   display: flex;
   position: absolute;
   width: 100%;
