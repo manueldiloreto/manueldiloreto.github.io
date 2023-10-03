@@ -11495,6 +11495,11 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+.portfele {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
@@ -12019,9 +12024,6 @@ codeoutput {
   margin-bottom: 1rem;
 }
 
-.portfele {
-  overflow: hidden;
-  margin: 0 auto;
-}
+
 
 
