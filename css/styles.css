@@ -11619,6 +11619,7 @@ header.masthead .masthead-heading {
   height: 3rem;
   cursor: pointer;
   background-color: transparent;
+  z-index:1024;
 }
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
