@@ -3080,13 +3080,13 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: transparent;
+  border-color: #00abff;
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
+  background-color: #00abff;
+  border-color: #00abff;
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
@@ -11984,8 +11984,8 @@ li {
 
 /* Style the buttons */
 .btn {
-  border: none;
-  outline: none;
+/*  border: none; */
+/*  outline: none; */
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
