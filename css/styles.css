@@ -11590,17 +11590,15 @@ header.masthead .masthead-heading {
   }
 }
 .portfolio-modal .modal-content {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  text-align: center;
+  padding: 10px 0;
 }
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2em;
+  margin-bottom: 15px;
 }
 .portfolio-modal .modal-content p.item-intro {
   font-style: italic;
-  margin-bottom: 2rem;
+  margin-bottom: 20px 0 30px;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .portfolio-modal .modal-content p {
