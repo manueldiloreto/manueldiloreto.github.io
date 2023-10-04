@@ -5622,12 +5622,6 @@ textarea.form-control-lg {
   margin: 0.25rem;
 }
 
-@media (min-width: 800px) {
-  .portfolio-modal .modal-dialog {
-    max-width: 50vw;
-    margin: 1.75rem auto;
-  }
-
 @media (min-width: 1440px) {
   .portfolio-modal .modal-dialog {
     max-width: 30vw;
