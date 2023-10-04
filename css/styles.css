@@ -11555,7 +11555,7 @@ header.masthead .masthead-heading {
   .modal-dialog {
     max-width: 30vw;
     margin: 3rem auto;
-    overflow-y: auto;
+/*    overflow-y: auto;*/
   }
   
   .modal-dialog-scrollable {
