@@ -5622,11 +5622,7 @@ textarea.form-control-lg {
   margin: 0.25rem;
 }
 
-@media (min-width: 1440px) {
-  .portfolio-modal .modal-dialog {
-    max-width: 30vw;
-    margin: 1.75rem auto;
-  }
+
   
   .modal-dialog-scrollable {
     height: calc(100% - 3.5rem);
@@ -11550,10 +11546,49 @@ header.masthead .masthead-heading {
 }
 
 .portfolio-modal .modal-dialog {
-  /* margin: 1rem; */
-  max-width: 65vh;
+  margin: 3rem auto;
+  max-width: 100vh;
+  overflow-y: auto;
 }
 
+@media (min-width: 900px) {
+  .modal-dialog {
+    max-width: 30vw;
+    margin: 3rem auto;
+    overflow-y: auto;
+  }
+  
+  .modal-dialog-scrollable {
+    height: calc(100% - 3.5rem);
+  }
+
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+
+  .modal-sm {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .portfolio-modal .modal-dialog {
+    max-width: 30vw;
+    margin: 3rem auto;
+  }
+  
+  .modal-dialog-scrollable {
+    height: calc(100% - 3.5rem);
+  }
+
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+
+  .modal-sm {
+    max-width: 300px;
+  }
+}
 .portfolio-modal .modal-content {
   padding-top: 3rem;
   padding-bottom: 3rem;
