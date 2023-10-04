@@ -3051,12 +3051,12 @@ textarea.form-control-lg {
 .btn-primary {
   color: #fff;
   background-color: #ffc800;
-  border-color: #ffc800;
+  border-color: #00abff;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #d9aa00;
-  border-color: #cca000;
+  background-color: #00abff;
+  border-color: #00abff;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
