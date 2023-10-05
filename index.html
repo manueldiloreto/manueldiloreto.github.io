@@ -172,7 +172,7 @@
                         
                         <!-- Portfolio item x-->
                           <div class="portfolio-item">
-                            <a href="https://manueldiloreto.github.io/projects/EU_inflation.html" class="portfolio-link">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                             <div class="portfele">
                                 <img class="img-fluid" img src="projects/HICP_Inflation_202301/inflation.png" style="z-index:1; filter: brightness(0.75);" alt="..."/>
                                 <h3 style="text-shadow: 2px 2px rgba(0, 0, 0, 0.5); pointer-events:none; color:white;position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);text-align:center;">What does Inflation look like?</h3>
@@ -370,6 +370,33 @@
                                     <hr>
                                     <p>The Italian National Insitute of Statistics publishes demographic indicators at the national and regional level every year. However, it releases only raw demographic data for municipalities. Demo-Stat, an app developed in R and R Shiny, fills this gap by providing an interactive platform for exploring, downloading, visualizing, and interacting with demographic indicators for more than 7900 municipalities over the span of 20 years.</p>
                                     <p>The application requests raw data from the National Institute of Statistics using istatAPI once a year. Then, the data is re-elaborated into five essential demographic indicators typically used in Research, which are then shown to the user in two distinct ways. The “Dashboard” view allows users to select a single municipality and observe all relevant indicators over a timespan of their choice. The “Plot & Compare” view enables users to compare how multiple municipalities perform on a single metric.</p>
+                                   </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class=" justify-content-center">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <img class="img" src="projects/HICP_Inflation_202301/inflation.png" width="320px" height="200px" alt="..." />
+                                    <h3 class="text-uppercase">EU Inflation</h3>
+                                    <p class="item-intro text-muted">A series of visualizations to observe Inflation in light of the recent inflation surge</p>
+                                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://manueldiloreto.github.io/projects/EU_inflation.html">Animation</a>
+                                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/manueldiloreto/EU-Inflation/blob/main/Animation%20tutorial.Rmd">Animation Tutorial</a>
+                               <div style="text-align: justify; padding-top:20px;">
+                                    <h6 style="font-size: 1rem;">Description:</h6>
+                                    <hr>
+                                    <p>This project offers a comprehensive overview of inflation trends in Europe, focusing on the major causes of the most recent inflationary surge. The project employs a key indicator devised by Eurostat, the Harmonised Index of Consumer Prices (HICP), which allows for the observation of overall inflation in the EU-27.</p>
+                                    <p>The project also presents an animation done with R and Blender, which clearly illustrates the change in price of 9 essential goods and services across Europe. A step-by-step tutorial on how to develop the animation using the gganimate package is available on my GitHub.</p>
                                    </div>
                                 </div>
                         </div>
