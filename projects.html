@@ -49,6 +49,8 @@
   <button class="btn" onclick="filterSelection('analyses')"> Analyses</button>
   <button class="btn" onclick="filterSelection('visualizations')"> Visualizations</button>
   <button class="btn" onclick="filterSelection('webapp')"> Web Apps</button>
+  <button class="btn" onclick="filterSelection('MLmodel')"> Machine Learning</button>
+
         </center>
 </div>
 </div>
@@ -60,8 +62,20 @@
             <div class="container">
                 <div class="row">
 
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 card analyses MLmodel show">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
+                            <div class="portfele">
+                                <img class="img-fluid" img src="projects/HR_data_analysis/HR_tree.png" style="z-index:1; filter: brightness(0.75);" alt="..."/>
+                                <h3 style="text-shadow: 2px 2px rgba(0, 0, 0, 0.5); pointer-events:none; color:white;position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);text-align:center;">Predicting Employee Turnover - HR Data</h3>
+                            </div>
+                                <img src="projects/tools_logo/python_logo.png" style="position:absolute; left: 0; top: 30px;">
+                            </a>
+                        </div>
+                    </div>
+
                     
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 card casestudies show">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 card casestudies MLmodel show">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
                             <div class="portfele">
@@ -397,8 +411,35 @@
                                <div style="text-align: justify; padding-top:20px;">
                                     <h6 style="font-size: 1rem;">Description:</h6>
                                     <hr>
-                                    <p>Waze is a community-driven GPS and navigational app that harennes the power of its user base to provide real-time navigation information for route planning and optimization. This innovative approach leverages user-supplied data to deliver up-to-the-minute directions and traffic updates. However, the reliance on user data means that user churn, which refers to the number of users who stop using or uninstall the app, poses a significant challenge. High churn rates not only affect Waze’s revenue but also decrease the quality of service, as fewer users equate to less real-time traffic data.</p>
+                                    <p>Waze is a community-driven GPS and navigational app that harnesses the power of its user base to provide real-time navigation information for route planning and optimization. This innovative approach leverages user-supplied data to deliver up-to-the-minute directions and traffic updates. However, the reliance on user data means that user churn, which refers to the number of users who stop using or uninstall the app, poses a significant challenge. High churn rates not only affect Waze’s revenue but also decrease the quality of service, as fewer users equate to less real-time traffic data.</p>
                                     <p>The objective of this case study is to analyze user churn and understand the factors that drive this phenomenon. To this end, I developed a Binomial Regression Model and two Machine Learning Models: Random Forest and XGBoost. The insights gathered from this analysis can help Waze leadership optimize retention strategies, enhance user experience, and develop targeted retention strategies that address specific user needs and preferences.</p>
+                                    <p style="text-align:right">October, 2023</p>   
+                                   </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Portfolio item 9 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class=" justify-content-center">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <img class="img" src="projects/waze_project/waze.png" width="240px" height="200px" alt="..." />
+                                    <h3 class="text-uppercase">Predicting Employee Turnover - HR Data</h3>
+                                    <p class="item-intro text-muted">Analyzing HR data and developing statistical and machine learning models to predict employee turnover</p>
+                                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://www.kaggle.com/code/manueldl/predicting-employee-turnover-hr-data?scriptVersionId=147071301">Analysis</a>
+                               <div style="text-align: justify; padding-top:20px;">
+                                    <h6 style="font-size: 1rem;">Description:</h6>
+                                    <hr>
+                                    <p>The dataset in this study contains several self-reported information about employees who worked in a company, such as satisfaction level, average monthly hours, and salary. This study aims to use machine learning and statistical techniques to develop models able to predict employee turnovers, understand what drives former employees to leave, and generate data-driven recommendations to increase retention.</p>
+                                    <p>I have developed a stable Random Forest model capable of predicting whether an employee is at risk of leaving with a confidence of above 90% and identifying the drivers of employee turnover. The analysis reveals that the employees represented in the data are generally overworked: most of them are assigned to several projects and work, on average, more than 200 hours a month. This effort, in turn, is not rewarded with promotions but with low evaluation scores and ultimately results in low satisfaction levels. </p>
                                     <p style="text-align:right">October, 2023</p>   
                                    </div>
                                 </div>
