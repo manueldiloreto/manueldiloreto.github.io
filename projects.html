@@ -62,6 +62,20 @@
             <div class="container">
                 <div class="row">
 
+                    
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 card analyses visualizations show">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal10">
+                            <div class="portfele">
+                                <img class="img-fluid" img src="projects/PBI_CustomerInsights/CustomerInsights.png" style="z-index:1; filter: brightness(0.75);" alt="..."/>
+                                <h3 style="text-shadow: 2px 2px rgba(0, 0, 0, 0.5); pointer-events:none; color:white;position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);text-align:center;">Predicting Employee Turnover</h3>
+                            </div>
+                                <img src="projects/tools_logo/pbi_logo.png" style="position:absolute; left: 0; top: 30px;">
+                            </a>
+                        </div>
+                    </div>
+
+                    
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-4 card analyses MLmodel show">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
@@ -203,7 +217,36 @@
         </footer>
         
         <!-- Portfolio Modals-->
-    <!-- Portfolio item 1 modal popup-->
+
+        <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class=" justify-content-center">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <img class="img" src="projects/PBI_CustomerInsights/CustomerInsights.png" width="320px" height="200px" alt="..." />
+                                    <h3 class="text-uppercase">Customer Insights</h3>
+                                    <p class="item-intro text-muted">A comprehensive Power BI report on the effectiveness of a marketing campaign</p>
+                                    <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://app.powerbi.com/view?r=eyJrIjoiMzAzYTY4MmYtODA5Yy00OTU5LTkzNzktYmQ3M2U2ZmU0ZmViIiwidCI6ImNhMmE3Zjc2LWRiZDctNGVjMC05MTA4LTZiM2Q1MjRmYjdjOCIsImMiOjh9">View</a>
+                                    <div style="text-align: justify; padding-top:20px;">
+                                    <h6 style="font-size: 1rem;">Description:</h6>
+                                    <hr>
+                                    <p>This project presents a detailed analysis of a year’s worth of sales data coupled with email marketing engagement metrics. The analyses featured in the report show that although the email marketing campaign has been very effective in reaching potential customers, its impact on sales is negligible.</p>
+                                    <p>The "Overview" page offers a high-level summary of the data, providing KPIs to give an at-a-glance understanding of overall performance. Through complex DAX operations, I created a <b>dynamic segmentation</b> system. This feature allows for flexible data exploration and uncovering trends and patterns across different customer segments. The segments are recalculated when a different time range or selection of products is specified. </p> 
+                                    <p>The "Engagement Analysis" page delves deep into the effectiveness of the email marketing campaign, featuring a funnel chart to visualize conversion rates. Key engagement metrics are compared against the standards of various industries to assess performance. Overall, the analysis shows that the email marketing campaign has been very effective in reaching customers.</p>
+                                    <p>The "Regression Analysis" page investigates the relationship between engagement metrics and sales. Overall, the analysis shows that the correlation between each engagement metric and sales is negative and considerably close to 0. Further statistical testing in R confirms that the relationship between sales and each engagement metric is not statistically significant, regardless of the segment considered.</p>
+                                   </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -470,6 +513,9 @@ $(document).ready(function() {
   }
   if(window.location.href.indexOf('#portfolioModal9') != -1) {
     $('#portfolioModal9').modal('show');
+  }
+  if(window.location.href.indexOf('#portfolioModal10') != -1) {
+    $('#portfolioModal10').modal('show');
   }
     
 });
