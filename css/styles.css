@@ -5605,7 +5605,7 @@ textarea.form-control-lg {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 2.5rem 2.5rem 1rem 3rem;
+  padding: 3rem 2.5rem 1rem 2.5rem;
   text-align: center;
 }
 
