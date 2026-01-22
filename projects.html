@@ -56,99 +56,216 @@
 </div>
         </section>
 
-            <!-- ✅ StaticForms Contact Form (GitHub Pages) -->
+<!-- CONTACT FORM (StaticForms) — paste anywhere in your page/modal -->
 <style>
-  .sf-form { display:grid; gap:12px; }
-  .sf-row { display:grid; gap:10px; grid-template-columns:1fr 1fr; }
-  .sf-field { display:grid; gap:6px; }
-  .sf-field label { font-weight:600; }
-  .sf-field input, .sf-field textarea, .sf-field select {
-    width:100%; padding:10px 12px; border:1px solid rgba(0,0,0,.18);
-    border-radius:10px; outline:none;
+  .contact-wrap{
+    display:flex;
+    justify-content:center;
+    padding: 12px 0;
   }
-  .sf-field textarea { min-height:120px; resize:vertical; }
-
-  .sf-btn {
-    padding:10px 14px; border-radius:10px; border:1px solid rgba(0,0,0,.18);
-    font-weight:700; cursor:pointer;
+  .contact-card{
+    width: min(720px, 92vw);
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 16px;
+    padding: 18px 18px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  }
+  .contact-title{
+    margin: 0 0 6px 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-align:center;
+  }
+  .contact-sub{
+    margin: 0 0 14px 0;
+    text-align:center;
+    opacity:.75;
+    font-size: .95rem;
+    line-height: 1.35;
+  }
+  .contact-grid{
+    display:grid;
+    gap: 12px;
+  }
+  .row-2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .field{
+    display:grid;
+    gap: 6px;
+  }
+  .field label{
+    font-weight: 700;
+    font-size: .92rem;
+  }
+  .field input, .field select, .field textarea{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(0,0,0,.18);
+    border-radius: 12px;
+    outline: none;
+    font-size: .95rem;
+    background: #fff;
+  }
+  .field textarea{
+    min-height: 130px;
+    resize: vertical;
+  }
+  .help{
+    margin: -4px 0 0 0;
+    opacity: .7;
+    font-size: .85rem;
+    line-height: 1.35;
+  }
+  .actions{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .btn{
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.18);
+    cursor: pointer;
+    font-weight: 800;
+  }
+  .btn-primary{
+    background: #111;
+    color: #fff;
+    border-color: transparent;
+  }
+  .btn-secondary{
+    background: transparent;
   }
 
   /* Honeypot hidden */
-  .sf-hp { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+  .hp{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
-  /* Toast popup */
-  .sf-toast {
+  /* Toast */
+  .toast{
     position: fixed;
-    right: 18px;
+    left: 50%;
     bottom: 18px;
-    max-width: 360px;
+    transform: translateX(-50%);
+    max-width: min(520px, 92vw);
     padding: 12px 14px;
     border: 1px solid rgba(0,0,0,.18);
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
     display: none;
     z-index: 9999;
   }
-  .sf-toast.show { display: block; }
-  .sf-toast strong { display:block; margin-bottom: 4px; }
-  .sf-toast .sf-toast-actions { margin-top: 8px; display:flex; gap:8px; }
-  .sf-toast .sf-toast-close {
-    padding: 6px 10px;
-    border-radius: 10px;
+  .toast.show{ display:block; }
+  .toast strong{ display:block; margin-bottom: 4px; }
+  .toast-actions{ margin-top: 8px; display:flex; justify-content:flex-end; }
+  .toast-close{
+    padding: 7px 10px;
+    border-radius: 12px;
     border: 1px solid rgba(0,0,0,.18);
     background: transparent;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
   }
 
-  @media (max-width: 640px) { .sf-row { grid-template-columns:1fr; } }
+  @media (max-width: 680px){
+    .row-2{ grid-template-columns: 1fr; }
+    .actions{ flex-direction: column; align-items: stretch; }
+    .btn{ width: 100%; }
+  }
 </style>
 
-<div id="sf-toast" class="sf-toast" role="status" aria-live="polite">
-  <strong>Thanks — message sent.</strong>
-  I’ll reply by email.
-  <div class="sf-toast-actions">
-    <button type="button" class="sf-toast-close" id="sf-toast-close">Close</button>
+<div class="contact-wrap">
+  <div class="contact-card" id="contact">
+    <h3 class="contact-title">Contact</h3>
+    <p class="contact-sub">
+      Tell me what you’re trying to achieve and what data/tools you have. I’ll reply by email with next steps.
+    </p>
+
+    <!-- Toast (shows after successful submit) -->
+    <div id="sf-toast" class="toast" role="status" aria-live="polite">
+      <strong>Thanks — message sent.</strong>
+      I’ll reply by email.
+      <div class="toast-actions">
+        <button type="button" class="toast-close" id="sf-toast-close">Close</button>
+      </div>
+    </div>
+
+    <form class="contact-grid"
+          action="https://api.staticforms.dev/submit"
+          method="POST"
+          accept-charset="UTF-8">
+
+      <!-- Required -->
+      <input type="hidden" name="apiKey" value="sf_1akkbla9hgm4g66ghnjlicld">
+
+      <!-- Redirect back to SAME page with a flag so we can show the toast -->
+      <input type="hidden" name="redirectTo" value="https://manueldiloreto.github.io/projects?sent=1">
+
+      <!-- Honeypot spam trap -->
+      <div class="hp" aria-hidden="true">
+        <label for="hp-field">Website</label>
+        <input id="hp-field" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <label for="company">Company (optional)</label>
+          <input id="company" name="company" type="text" autocomplete="organization">
+        </div>
+
+        <div class="field">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="" selected disabled>Select one…</option>
+            <option>BI Dashboards</option>
+            <option>Insights Reports</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="data">Data sources / tools (optional)</label>
+        <input id="data" name="data_sources" type="text"
+               placeholder="e.g., Shopify, Stripe, GA4, HubSpot, SQL DB, spreadsheets">
+        <p class="help">This helps me estimate scope quickly.</p>
+      </div>
+
+      <div class="field">
+        <label for="message">What do you need?</label>
+        <textarea id="message" name="message" required
+          placeholder="What question are you trying to answer? What’s the current pain? What would success look like?"></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <button class="btn btn-secondary" type="reset">Clear</button>
+      </div>
+
+      <p class="help" style="text-align:center; margin-top: 2px;">
+        By sending this, you agree to be contacted by email about your request.
+      </p>
+    </form>
   </div>
 </div>
-
-<form class="sf-form"
-      action="https://api.staticforms.dev/submit"
-      method="POST"
-      accept-charset="UTF-8">
-
-  <!-- Required -->
-  <input type="hidden" name="apiKey" value="sf_1akkbla9hgm4g66ghnjlicld">
-
-  <!-- IMPORTANT: set this to the SAME page the form lives on, with ?sent=1 -->
-  <input type="hidden" name="redirectTo" value="https://YOUR-USERNAME.github.io/YOUR-PAGE.html?sent=1">
-
-  <!-- Honeypot (spam trap) -->
-  <div class="sf-hp" aria-hidden="true">
-    <label for="sf-company-website">Website</label>
-    <input id="sf-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
-  </div>
-
-  <div class="sf-row">
-    <div class="sf-field">
-      <label for="sf-name">Name</label>
-      <input id="sf-name" name="name" type="text" autocomplete="name" required>
-    </div>
-
-    <div class="sf-field">
-      <label for="sf-email">Email</label>
-      <input id="sf-email" name="email" type="email" autocomplete="email" required>
-    </div>
-  </div>
-
-  <div class="sf-field">
-    <label for="sf-message">Message</label>
-    <textarea id="sf-message" name="message" required></textarea>
-  </div>
-
-  <button class="sf-btn" type="submit">Send</button>
-</form>
 
 <script>
   (function () {
@@ -163,12 +280,13 @@
     const url = new URL(window.location.href);
     if (url.searchParams.get("sent") === "1") {
       showToast();
-      // Clean the URL so refresh doesn't show the toast again
+      // Remove ?sent=1 so refresh doesn't show the toast again
       url.searchParams.delete("sent");
       window.history.replaceState({}, "", url.toString());
     }
   })();
 </script>
+
 
         
         <section class="page-section bg-light" id="portfolio" style="padding-top:20px;">
