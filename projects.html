@@ -56,7 +56,120 @@
 </div>
         </section>
 
-            
+            <!-- ✅ StaticForms Contact Form (GitHub Pages) -->
+<style>
+  .sf-form { display:grid; gap:12px; }
+  .sf-row { display:grid; gap:10px; grid-template-columns:1fr 1fr; }
+  .sf-field { display:grid; gap:6px; }
+  .sf-field label { font-weight:600; }
+  .sf-field input, .sf-field textarea, .sf-field select {
+    width:100%; padding:10px 12px; border:1px solid rgba(0,0,0,.18);
+    border-radius:10px; outline:none;
+  }
+  .sf-field textarea { min-height:120px; resize:vertical; }
+
+  .sf-btn {
+    padding:10px 14px; border-radius:10px; border:1px solid rgba(0,0,0,.18);
+    font-weight:700; cursor:pointer;
+  }
+
+  /* Honeypot hidden */
+  .sf-hp { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+
+  /* Toast popup */
+  .sf-toast {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    max-width: 360px;
+    padding: 12px 14px;
+    border: 1px solid rgba(0,0,0,.18);
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    display: none;
+    z-index: 9999;
+  }
+  .sf-toast.show { display: block; }
+  .sf-toast strong { display:block; margin-bottom: 4px; }
+  .sf-toast .sf-toast-actions { margin-top: 8px; display:flex; gap:8px; }
+  .sf-toast .sf-toast-close {
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.18);
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) { .sf-row { grid-template-columns:1fr; } }
+</style>
+
+<div id="sf-toast" class="sf-toast" role="status" aria-live="polite">
+  <strong>Thanks — message sent.</strong>
+  I’ll reply by email.
+  <div class="sf-toast-actions">
+    <button type="button" class="sf-toast-close" id="sf-toast-close">Close</button>
+  </div>
+</div>
+
+<form class="sf-form"
+      action="https://api.staticforms.dev/submit"
+      method="POST"
+      accept-charset="UTF-8">
+
+  <!-- Required -->
+  <input type="hidden" name="apiKey" value="sf_1akkbla9hgm4g66ghnjlicld">
+
+  <!-- IMPORTANT: set this to the SAME page the form lives on, with ?sent=1 -->
+  <input type="hidden" name="redirectTo" value="https://YOUR-USERNAME.github.io/YOUR-PAGE.html?sent=1">
+
+  <!-- Honeypot (spam trap) -->
+  <div class="sf-hp" aria-hidden="true">
+    <label for="sf-company-website">Website</label>
+    <input id="sf-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+
+  <div class="sf-row">
+    <div class="sf-field">
+      <label for="sf-name">Name</label>
+      <input id="sf-name" name="name" type="text" autocomplete="name" required>
+    </div>
+
+    <div class="sf-field">
+      <label for="sf-email">Email</label>
+      <input id="sf-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+
+  <div class="sf-field">
+    <label for="sf-message">Message</label>
+    <textarea id="sf-message" name="message" required></textarea>
+  </div>
+
+  <button class="sf-btn" type="submit">Send</button>
+</form>
+
+<script>
+  (function () {
+    const toast = document.getElementById("sf-toast");
+    const closeBtn = document.getElementById("sf-toast-close");
+
+    function showToast() { toast.classList.add("show"); }
+    function hideToast() { toast.classList.remove("show"); }
+
+    closeBtn.addEventListener("click", hideToast);
+
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("sent") === "1") {
+      showToast();
+      // Clean the URL so refresh doesn't show the toast again
+      url.searchParams.delete("sent");
+      window.history.replaceState({}, "", url.toString());
+    }
+  })();
+</script>
+
         
         <section class="page-section bg-light" id="portfolio" style="padding-top:20px;">
             <div class="container">
